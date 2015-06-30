@@ -1,0 +1,28 @@
+header {
+  width: 100%;
+  background-color: rgba(157,157,157,1);
+  padding: 15px;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+
+
+  aside {
+    width: 30%;
+    float: left;
+  }
+
+  section {
+    width: 60%;
+    float: right;
+    margin-left: 5%;
+  }
+}
+
+footer {
+  width: 100%;
+  background-color: rgba(230,230,230,1);
+  padding: 15px;
+}

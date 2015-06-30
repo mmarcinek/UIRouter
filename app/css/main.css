@@ -1,0 +1,20 @@
+header {
+  width: 100%;
+  background-color: #9d9d9d;
+  padding: 15px; }
+
+.container {
+  width: 500px;
+  margin: 0 auto; }
+  .container aside {
+    width: 30%;
+    float: left; }
+  .container section {
+    width: 60%;
+    float: right;
+    margin-left: 5%; }
+
+footer {
+  width: 100%;
+  background-color: #e6e6e6;
+  padding: 15px; }
