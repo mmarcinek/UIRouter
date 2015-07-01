@@ -5,7 +5,8 @@ header {
 
 .container {
   width: 500px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 30px; }
   .container aside {
     width: 30%;
     float: left; }
@@ -17,4 +18,5 @@ header {
 footer {
   width: 100%;
   background-color: #e6e6e6;
-  padding: 15px; }
+  padding: 15px;
+  margin-top: 50px; }

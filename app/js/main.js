@@ -1,6 +1,19 @@
 ;(function (){
 
   'use strict';
+      var allThePretzels = [
+            {
+              id: 1,
+              type: 'Soft',
+              brand: 'Annies'
+            },
+            {
+              id: 2,
+              type: 'Bavarian',
+              brand: 'Philly'
+            }
+
+            ];
 
   angular.module('Pretzels', ['ui.router'])
 
@@ -12,47 +25,34 @@
 
       $stateProvider
 
-        .state('home', {
+        .state('pretzel', {
           url: '/',
-          views: {
-            'header': {
-              templateUrl: 'js/templates/header.tpl.html'
-            },
-            'footer': {
-              templateUrl: 'js/templates/footer.tpl.html'
-            },
-            'sidebar' : {
-              templateUrl: 'js/templates/sidebar.tpl.html',
-              controller: 'PretzelCtrl'
-            },
-            'content': {
-              templateUrl: 'js/templates/home.tpl.html'
-            }
-          }
+          templateUrl: 'js/templates/home.tpl.html',
+          controller: 'PretzelCtrl'
         })
-        .state('about', {
-          url: '/about',
-          templateUrl: 'js/templates/about.tpl.html'
+        .state('pretzel.info', {
+          url: ':pretzelId',
+          templateUrl: 'js/templates/info.tpl.html',
+          controller: 'PretzelCtrl'
         });
 
     }
 
     ])
 
-   .controller('PretzelCtrl', ['$scope',
-          function ($scope){
-            $scope.pretzels = [
-            {
-              id: 1,
-              type: 'Soft'
-            },
-            {
-              id: 2,
-              type: 'Bavarian'
-            }
+   .controller('PretzelCtrl', ['$scope', '$stateParams',
+          function ($scope, $stateParams){
 
-            ];
+          $scope.pretzels = allThePretzels;
+
+          console.log($stateParams);
+          if($stateParams.pretzelId !== undefined){
+            var prezId = Number($stateParams.pretzelId);
+            $scope.pretzel = _.findWhere($scope.pretzels, {id: prezId});
           }
+
+
+        }
       ]);
 
 }());

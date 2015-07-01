@@ -1,2 +1,9 @@
-<h2>This is my home page</h2>
-
+<aside>
+  <ul>
+    <li ng-repeat="p in pretzels">
+      <a href="/#/{{ p.id }}"> {{ p.type }}</a>
+    </li>
+  </ul>
+</aside>
+<section ui-view>
+</section>

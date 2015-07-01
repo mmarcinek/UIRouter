@@ -8,22 +8,11 @@
 </head>
 <body ng-app="Pretzels">
 
-<nav>
-  <a href="/#/">Home</a>
-  <a href="/#/about">About</a>
+  <header></header>
 
-</nav>
+  <div class="container" ui-view></div>
 
-  <header ui-view="header"></header>
-
-  <div class="container">
-
-    <aside ui-view="sidebar"></aside>
-    <section ui-view="content"></section>
-
-  </div>
-
-  <footer ui-view="footer"></footer>
+  <footer></footer>
 
   <!-- VENDOR -->
   <script src="js/vendor/jquery.js"></script>
