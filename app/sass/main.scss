@@ -1,16 +1,17 @@
 header {
   width: 100%;
-  background-color: rgba(157,157,157,1);
+  background-color: rgba(157,165,180,1);
   padding: 15px;
 }
 
 .container {
   width: 500px;
   margin: 0 auto;
-
+  padding: 25px 0;
+  overflow: hidden;
 
   aside {
-    width: 30%;
+    width: 35%;
     float: left;
   }
 
@@ -19,10 +20,12 @@ header {
     float: right;
     margin-left: 5%;
   }
+
 }
 
 footer {
   width: 100%;
-  background-color: rgba(230,230,230,1);
+  background-color: rgba(40,44,52,1);
   padding: 15px;
+  color: white;
 }
